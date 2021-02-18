@@ -1,13 +1,10 @@
 import React from "react";
 import firebase from "firebase/app";
 import "firebase/messaging";
+import "firebase/firebase-messaging";
+import "firebase/firebase-app";
 
-// eslint-disable-next-line no-undef
-importScripts("https://www.gstatic.com/firebasejs/4.8.1/firebase-app.js");
-// eslint-disable-next-line no-undef
-importScripts("https://www.gstatic.com/firebasejs/4.8.1/firebase-messaging.js");
-
-const firebaseConfig = {
+firebase.initializeApp({
   apiKey: "AIzaSyDqgjAA1aQagEQ1nMx1eDm7GBvMF6pJ82w",
   authDomain: "nwitter-61071.firebaseapp.com",
   projectId: "nwitter-61071",
@@ -15,8 +12,6 @@ const firebaseConfig = {
   messagingSenderId: "653801352300",
   appId: "1:653801352300:web:91db5c8baf89f18e4ebc49",
   measurementId: "G-6C69X7NQWD",
-};
+});
 
-firebase.initializeApp(firebaseConfig);
-
-export const messaging = firebase.messaging();
+const messaging = firebase.messaging();

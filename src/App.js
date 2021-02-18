@@ -1,7 +1,14 @@
+/* eslint-disable no-restricted-globals */
 import React, { useEffect } from "react";
 import { messaging } from "./fbase";
 
 function App() {
+  self.importScripts(
+    "https://www.gstatic.com/firebasejs/4.8.1/firebase-app.js"
+  );
+  self.importScripts(
+    "https://www.gstatic.com/firebasejs/4.8.1/firebase-messaging.js"
+  );
   // useEffect(() => {
   //   messaging.requestPermission();
   //   messaging
