@@ -16,6 +16,7 @@ function App() {
     if (Notification.permission !== "denied") {
       Notification.requestPermission((permission) => {
         if (permission === "granted") {
+          console.log("SADaad");
           messaging
             .getToken({
               vapidKey:
