@@ -14,6 +14,11 @@ const App = () => {
   //     .catch((err) => console.log(err));
   // }, []);
   const onClick = () => {
+    navigator.serviceWorker.getRegistrations().then(function (registrations) {
+      for (let registration of registrations) {
+        registration.unregister();
+      }
+    });
     if (Notification.permission !== "denied") {
       Notification.requestPermission((permission) => {
         if (permission === "granted") {
