@@ -2,11 +2,6 @@ import React from "react";
 import firebase from "firebase/app";
 import "firebase/messaging";
 
-// eslint-disable-next-line no-undef
-importScripts("https://www.gstatic.com/firebasejs/4.8.1/firebase-app.js");
-// eslint-disable-next-line no-undef
-importScripts("https://www.gstatic.com/firebasejs/4.8.1/firebase-messaging.js");
-
 const firebaseConfig = {
   apiKey: "AIzaSyDqgjAA1aQagEQ1nMx1eDm7GBvMF6pJ82w",
   authDomain: "nwitter-61071.firebaseapp.com",
